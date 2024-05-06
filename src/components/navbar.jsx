@@ -1,0 +1,96 @@
+import { IoCodeSlashOutline } from "react-icons/io5";
+import { CiMenuFries } from "react-icons/ci";
+import { TfiClose } from "react-icons/tfi";
+import { useState } from "react";
+let menu = [
+  { title: "Home", to: "hero" },
+  { title: "About", to: "about" },
+  { title: "Projects", to: "projects" },
+  { title: "Contact", to: "contact" },
+];
+
+const Navbar = () => {
+  const [mobileMenu, setMobileMenu] = useState(false);
+
+  const handleScrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    const navbarHeight = document.querySelector(".navbr").offsetHeight;
+    const offset = section.offsetTop - navbarHeight * 1.5;
+
+    window.scrollTo({
+      top: offset,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <main className='flex items-center sticky lg:h-24 h-16 lg:border-b-[1px] navbr border-alt/20 lg:bg-base z-40 top-0 left-0 justify-between container mx-auto px-5 lg:px-32'>
+      <div className='basis-1/5 flex items-center lg:hidden' />
+      <div className='basis-1/5 lg:flex items-center hidden'>
+        <p className='lg:text-xl text-lg font-medium'>Ony3dika</p>
+        <IoCodeSlashOutline className='ml-2 text-call' size={"1.5rem"} />
+      </div>
+
+      <section className='basis-3/5 lg:flex items-center hidden justify-center'>
+        {menu.map((item, index) => (
+          <a
+            className='mx-8 hover:text-call transition-all duration-200 hover:scale-110 ease-linear'
+            onClick={() => handleScrollToSection(item.to)}
+            key={index}
+          >
+            {item.title}
+          </a>
+        ))}
+      </section>
+
+      {/* Mobile */}
+
+      <section className='basis-1/5 lg:hidden flex relative justify-end'>
+        <div className='flex p-2 rounded-full bg-alt float'>
+          <CiMenuFries
+            size={"1.5rem"}
+            className='text-white'
+            onClick={() => setMobileMenu(true)}
+          />
+        </div>
+
+        <nav
+          className={`w-full h-screen backdrop-blur-lg transition-all duration-300 ease-in-out text-base left-0 z-20 px-5 fixed ${
+            mobileMenu ? "bottom-0" : "bottom-[-100%]"
+          }`}
+        >
+          <main className='bg-alt menuBg px-5 bottom-0 left-0 h-[90vh] rounded-t-2xl fixed w-full'>
+            <section className='flex justify-between items-center mt-10'>
+              <div className='flex items-center'>
+                <p className='lg:text-xl text-lg font-medium'>Ony3dika</p>
+                <IoCodeSlashOutline
+                  className='ml-2 text-call'
+                  size={"1.5rem"}
+                />
+              </div>
+              <TfiClose onClick={() => setMobileMenu(false)} />
+            </section>
+
+            <section className='mt-20 divide-y-[1px] divide-base/20'>
+              {menu.map((item, index) => (
+                <div key={index} className='py-8'>
+                  <a
+                    // href={item.to}
+                    onClick={() => {
+                      setMobileMenu(false);
+                      handleScrollToSection(item.to);
+                    }}
+                  >
+                    {item.title}
+                  </a>
+                </div>
+              ))}
+            </section>
+          </main>
+        </nav>
+      </section>
+    </main>
+  );
+};
+
+export default Navbar;

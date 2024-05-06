@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Marcellus&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+a,
+button {
+  cursor: none;
+}
+
+.urban {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.marcel {
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pat {
+  background-image: url(./assets//pat.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.textOutline {
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #e23c20;
+}
+
+.textOutline2 {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #1d2d30;
+}
+
+.menuBg {
+  background-image: url(./assets//bg2.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.float {
+  animation: float 5s ease-in-out infinite;
+}
