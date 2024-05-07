@@ -28,7 +28,12 @@ const Navbar = () => {
     <main className='flex items-center sticky lg:h-24 h-16 lg:border-b-[1px] navbr border-alt/20 lg:bg-base z-40 top-0 left-0 justify-between container mx-auto px-5 lg:px-32'>
       <div className='basis-1/5 flex items-center lg:hidden'>
         <Reveal>
-          <p className='mt-8 text-xl textOutline text-[#dad4d1]'>Ony3dika</p>
+          <p className='mt-8 text-xl flex items-center text-alt'>
+            Ony3dika
+            <Reveal>
+              <IoCodeSlashOutline className='ml-2 text-call' size={"1rem"} />
+            </Reveal>
+          </p>
         </Reveal>
       </div>
       <div className='basis-1/5 lg:flex items-center hidden'>

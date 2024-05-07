@@ -45,6 +45,12 @@ button {
   background-repeat: no-repeat;
 }
 
+.entry {
+  background-image: url(./assets//entry.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 @keyframes float {
   0% {
     transform: translatey(0px);
