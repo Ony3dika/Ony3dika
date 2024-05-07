@@ -70,11 +70,11 @@ const Navbar = () => {
         </div>
 
         <nav
-          className={`w-full h-screen backdrop-blur-lg z-50 transition-all duration-300 ease-in-out text-base left-0 px-5 fixed ${
-            mobileMenu ? "bottom-0" : "-bottom-[100%]"
+          className={`w-full h-screen backdrop-blur-lg z-50 transition-all duration-300 ease-in-out text-base top-0 px-5 fixed ${
+            mobileMenu ? "left-0" : "left-[-100%]"
           }`}
         >
-          <main className='bg-alt menuBg px-5 bottom-0 left-0 h-[90vh] rounded-t-2xl fixed w-full'>
+          <main className='bg-alt menuBg px-5 bottom-0 left-0 h-full rounded-t-2xl fixed w-full'>
             <section className='flex justify-between items-center mt-10'>
               <div className='flex items-center'>
                 <Reveal>
