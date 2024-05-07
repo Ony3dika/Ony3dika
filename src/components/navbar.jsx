@@ -69,45 +69,45 @@ const Navbar = () => {
           />
         </div>
 
-        <nav
-          className={`w-full h-screen backdrop-blur-lg z-50 transition-all duration-300 ease-in-out text-base top-0 px-5 fixed ${
-            mobileMenu ? "left-0" : "left-[-100%]"
-          }`}
-        >
-          <main className='bg-alt menuBg px-5 bottom-0 left-0 h-full rounded-t-2xl fixed w-full'>
-            <section className='flex justify-between items-center mt-10'>
-              <div className='flex items-center'>
-                <Reveal>
-                  <p className='lg:text-xl text-lg font-medium'>Ony3dika</p>
-                </Reveal>
-                <Reveal>
-                  <IoCodeSlashOutline
-                    className='ml-2 text-call'
-                    size={"1.5rem"}
-                  />
-                </Reveal>
-              </div>
-              <TfiClose onClick={() => setMobileMenu(false)} />
-            </section>
-
-            <section className='mt-20 divide-y-[1px] divide-base/20'>
-              {menu.map((item, index) => (
-                <div key={index} className='py-8'>
+        {mobileMenu && (
+          <nav
+            className={`w-full h-screen backdrop-blur-lg z-50 transition-all duration-300 ease-in-out text-base left-0 px-5 fixed bottom-0`}
+          >
+            <main className='bg-alt menuBg px-5 bottom-0 left-0 h-[90vh] rounded-t-2xl fixed w-full'>
+              <section className='flex justify-between items-center mt-10'>
+                <div className='flex items-center'>
                   <Reveal>
-                    <a
-                      onClick={() => {
-                        setMobileMenu(false);
-                        handleScrollToSection(item.to);
-                      }}
-                    >
-                      {item.title}
-                    </a>
+                    <p className='lg:text-xl text-lg font-medium'>Ony3dika</p>
+                  </Reveal>
+                  <Reveal>
+                    <IoCodeSlashOutline
+                      className='ml-2 text-call'
+                      size={"1.5rem"}
+                    />
                   </Reveal>
                 </div>
-              ))}
-            </section>
-          </main>
-        </nav>
+                <TfiClose onClick={() => setMobileMenu(false)} />
+              </section>
+
+              <section className='mt-20 divide-y-[1px] divide-base/20'>
+                {menu.map((item, index) => (
+                  <div key={index} className='py-8'>
+                    <Reveal>
+                      <a
+                        onClick={() => {
+                          setMobileMenu(false);
+                          handleScrollToSection(item.to);
+                        }}
+                      >
+                        {item.title}
+                      </a>
+                    </Reveal>
+                  </div>
+                ))}
+              </section>
+            </main>
+          </nav>
+        )}
       </section>
     </main>
   );
