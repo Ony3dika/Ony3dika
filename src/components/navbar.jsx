@@ -25,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <main className='lg:fixed z-40 top-0 flex items-center lg:h-24 h-16 lg:border-b-[1px] border-alt/20 lg:bg-base justify-between container mx-auto px-5 lg:px-32'>
+    <main className='lg:fixed z-40 top-0 flex items-center lg:h-24 h-16 lg:border-b-[1px] navbr border-alt/20 lg:bg-base justify-between container mx-auto px-5 lg:px-32'>
       <div className='basis-1/5 flex items-center lg:hidden'>
         <Reveal>
           <p className='mt-8 text-xl flex items-center text-alt'>
