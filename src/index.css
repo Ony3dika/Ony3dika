@@ -30,7 +30,7 @@ button {
 }
 
 .textOutline {
-  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #e23c20;
 }
 

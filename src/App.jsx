@@ -29,7 +29,7 @@ function App() {
  
 
   return (
-    <div className='min-h-screen bg-base relative app text-alt urban pb-10 lg:pb-20'>
+    <div className='min-h-screen overflow-hidden bg-base relative app text-alt urban pb-10 lg:pb-20'>
       <div
         
         style={{

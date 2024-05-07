@@ -2,6 +2,7 @@ import { IoCodeSlashOutline } from "react-icons/io5";
 import { CiMenuFries } from "react-icons/ci";
 import { TfiClose } from "react-icons/tfi";
 import { useState } from "react";
+import Reveal from "./reveal";
 let menu = [
   { title: "Home", to: "hero" },
   { title: "About", to: "about" },
@@ -25,28 +26,37 @@ const Navbar = () => {
 
   return (
     <main className='flex items-center sticky lg:h-24 h-16 lg:border-b-[1px] navbr border-alt/20 lg:bg-base z-40 top-0 left-0 justify-between container mx-auto px-5 lg:px-32'>
-      <div className='basis-1/5 flex items-center lg:hidden' />
+      <div className='basis-1/5 flex items-center lg:hidden'>
+        <Reveal>
+          <p className='mt-8 text-xl textOutline text-[#dad4d1]'>Ony3dika</p>
+        </Reveal>
+      </div>
       <div className='basis-1/5 lg:flex items-center hidden'>
-        <p className='lg:text-xl text-lg font-medium'>Ony3dika</p>
-        <IoCodeSlashOutline className='ml-2 text-call' size={"1.5rem"} />
+        <Reveal>
+          <p className='lg:text-xl text-lg font-medium'>Ony3dika</p>
+        </Reveal>
+        <Reveal>
+          <IoCodeSlashOutline className='ml-2 text-call' size={"1.5rem"} />
+        </Reveal>
       </div>
 
       <section className='basis-3/5 lg:flex items-center hidden justify-center'>
         {menu.map((item, index) => (
-          <a
-            className='mx-8 hover:text-call transition-all duration-200 hover:scale-110 ease-linear'
-            onClick={() => handleScrollToSection(item.to)}
-            key={index}
-          >
-            {item.title}
-          </a>
+          <Reveal key={index}>
+            <a
+              className='mx-8 hover:text-call transition-all duration-200 hover:scale-110 ease-linear'
+              onClick={() => handleScrollToSection(item.to)}
+            >
+              {item.title}
+            </a>
+          </Reveal>
         ))}
       </section>
 
       {/* Mobile */}
 
       <section className='basis-1/5 lg:hidden flex relative justify-end'>
-        <div className='flex p-2 rounded-full bg-alt float'>
+        <div className='flex p-2 rounded-full top-8 fixed bg-alt float'>
           <CiMenuFries
             size={"1.5rem"}
             className='text-white'
@@ -62,11 +72,15 @@ const Navbar = () => {
           <main className='bg-alt menuBg px-5 bottom-0 left-0 h-[90vh] rounded-t-2xl fixed w-full'>
             <section className='flex justify-between items-center mt-10'>
               <div className='flex items-center'>
-                <p className='lg:text-xl text-lg font-medium'>Ony3dika</p>
-                <IoCodeSlashOutline
-                  className='ml-2 text-call'
-                  size={"1.5rem"}
-                />
+                <Reveal>
+                  <p className='lg:text-xl text-lg font-medium'>Ony3dika</p>
+                </Reveal>
+                <Reveal>
+                  <IoCodeSlashOutline
+                    className='ml-2 text-call'
+                    size={"1.5rem"}
+                  />
+                </Reveal>
               </div>
               <TfiClose onClick={() => setMobileMenu(false)} />
             </section>
@@ -74,15 +88,16 @@ const Navbar = () => {
             <section className='mt-20 divide-y-[1px] divide-base/20'>
               {menu.map((item, index) => (
                 <div key={index} className='py-8'>
-                  <a
-                    // href={item.to}
-                    onClick={() => {
-                      setMobileMenu(false);
-                      handleScrollToSection(item.to);
-                    }}
-                  >
-                    {item.title}
-                  </a>
+                  <Reveal>
+                    <a
+                      onClick={() => {
+                        setMobileMenu(false);
+                        handleScrollToSection(item.to);
+                      }}
+                    >
+                      {item.title}
+                    </a>
+                  </Reveal>
                 </div>
               ))}
             </section>

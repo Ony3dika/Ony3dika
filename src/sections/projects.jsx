@@ -8,6 +8,7 @@ import { ImSpinner9 } from "react-icons/im";
 import { SiGithub } from "react-icons/si";
 import { RxExternalLink } from "react-icons/rx";
 import { useState } from "react";
+import Reveal from "../components/reveal";
 
 let projects = [
   {
@@ -70,9 +71,10 @@ const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <main id="projects" className='mt-20 container mx-auto px-5 lg:px-32'>
-      <p className='text-3xl font-semibold'>Projects</p>
-
+    <main id='projects' className='mt-20 container mx-auto px-5 lg:px-32'>
+      <Reveal>
+        <p className='text-3xl font-semibold'>Projects</p>
+      </Reveal>
       {/* Project Section */}
       <section className='lg:mt-10 mt-5 flex group flex-col divide-y-[1px] divide-alt'>
         {projects.map((project, index) => (
@@ -92,41 +94,49 @@ const Projects = () => {
             {/* Text Desc of Project */}
             <section
               className={`basis-full lg:basis-2/3 lg:ml-5 py-5 lg:py-0 duration-500 ease-in-out transition-all ${
-                index == hoveredIndex
-                  ? "lg:group-hover:translate-x-8"
-                  : "s]"
+                index == hoveredIndex ? "lg:group-hover:translate-x-8" : "s]"
               }`}
             >
-              <p className='text-xl lg:text-5xl marcel'>{project.title}</p>
+              <Reveal>
+                <p className='text-xl lg:text-5xl marcel'>{project.title}</p>
+              </Reveal>
 
               <img
                 src={project.img}
                 className={`transition-all ease-in-out duration-700 rounded-xl block lg:hidden ${
                   index == hoveredIndex
-                    ? "group-hover:scale-100 group-hover:contrast-100"
-                    : "scale-[0.9] contrast-50"
+                    ? "group-hover:scale-100 scale-90 group-hover:contrast-100"
+                    : "scale-[0.85] contrast-50"
                 }`}
                 alt='image-of-project'
               />
-              <p className='mt-3 lg:text-lg text-xs text-alt/70'>
-                {project.body}
-              </p>
+
+              <Reveal>
+                <p className='mt-3 lg:text-lg text-xs text-alt/70'>
+                  {project.body}
+                </p>
+              </Reveal>
 
               <div className='flex justify-around text-alt/80 mt-5 lg:mt-10 w-1/3 lg:w-1/5'>
-                <a
-                  href={project.repo}
-                  className='hover:text-call/70 transition-all duration-200 ease-in-out'
-                  target='_blank'
-                >
-                  <SiGithub size={"1.5rem"} />
-                </a>
-                <a
-                  href={project.link}
-                  className='hover:text-call/70 transition-all duration-200 ease-in-out'
-                  target='_blank'
-                >
-                  <RxExternalLink size={"1.5rem"} />
-                </a>
+                <Reveal>
+                  <a
+                    href={project.repo}
+                    className='hover:text-call/70 transition-all duration-200 ease-in-out'
+                    target='_blank'
+                  >
+                    <SiGithub size={"1.5rem"} />
+                  </a>
+                </Reveal>
+                
+                <Reveal>
+                  <a
+                    href={project.link}
+                    className='hover:text-call/70 transition-all duration-200 ease-in-out'
+                    target='_blank'
+                  >
+                    <RxExternalLink size={"1.5rem"} />
+                  </a>
+                </Reveal>
               </div>
             </section>
 
@@ -138,7 +148,6 @@ const Projects = () => {
 
             <img
               src={project.img}
-              
               className={`lg:h-36 h-20 lg:block absolute hidden rounded-xl top-0 lg:top-auto right-0 lg:right-20 z-10 transition-all duration-500 ease-in-out ${
                 index === hoveredIndex
                   ? "opacity-100 scale-125 -translate-y-10 translate-x-10"

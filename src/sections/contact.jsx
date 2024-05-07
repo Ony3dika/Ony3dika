@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import { ImSpinner9 } from "react-icons/im";
 import { RiTwitterXLine } from "react-icons/ri";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import Reveal from "../components/reveal";
 
 
 let socials = [
@@ -67,13 +68,17 @@ const Contact = () => {
       id='contact'
       className='lg:mt-32 mt-20 container mx-auto px-5 lg:px-32'
     >
-      <p className='text-3xl font-semibold'>Contact</p>
+      <Reveal>
+        <p className='text-3xl font-semibold'>Contact</p>
+      </Reveal>
 
-      <p className='text-4xl lg:text-9xl font-black mt-10'>
-        Let&apos;s{" "}
-        <span className='text-transparent textOutline'>Abeg nah!!</span> work{" "}
-        <br className='lg:block hidden' /> together
-      </p>
+      <Reveal>
+        <p className='text-4xl lg:text-9xl py-3 lg:py-5 font-black mt-10'>
+          Let&apos;s{" "}
+          <span className='text-transparent textOutline'>Smoothly</span> work{" "}
+          <br className='lg:block hidden' /> together
+        </p>
+      </Reveal>
 
       <section className='mt-10 lg:mt-20 flex lg:flex-row flex-col lg:border-[1px] border-alt/20 rounded-lg overflow-hidden lg:min-h-[80vh]'>
         <div className='lg:basis-[30%] lg:h-auto h-56 pat' />
@@ -85,20 +90,19 @@ const Contact = () => {
           className='lg:basis-[70%] lg:border-l-[1px] border-alt/20 flex flex-col justify-center lg:px-10 lg:bg-[#ddcfc8]'
         >
           <section className='flex items-center justify-between lg:mt-0 mt-10'>
-            <p className='font-bold lg:basis-[30%] text-xl lg:text-3xl'>
-              Get In Touch
-            </p>
+            <Reveal>
+              <p className='font-bold lg:basis-[30%] text-xl lg:text-3xl'>
+                Get In Touch
+              </p>
+            </Reveal>
 
             <div className='flex'>
               {socials.map((social, index) => (
-                <a
-                  href={social.to}
-                  className='mx-3'
-                  key={index}
-                  target='_blank'
-                >
-                  {social.icon}
-                </a>
+                <Reveal key={index}>
+                  <a href={social.to} className='mx-8' target='_blank'>
+                    {social.icon}
+                  </a>
+                </Reveal>
               ))}
             </div>
           </section>
