@@ -71,7 +71,7 @@ const Navbar = () => {
 
         <nav
           className={`w-full h-screen backdrop-blur-lg z-50 transition-all duration-300 ease-in-out text-base left-0 px-5 fixed ${
-            mobileMenu ? "bottom-0" : "bottom-[-100%]"
+            mobileMenu ? "bottom-0" : "-bottom-[100%]"
           }`}
         >
           <main className='bg-alt menuBg px-5 bottom-0 left-0 h-[90vh] rounded-t-2xl fixed w-full'>
