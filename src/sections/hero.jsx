@@ -5,7 +5,7 @@ import Reveal from "../components/reveal";
 
 const Hero = () => {
   return (
-    <main id='hero' className='mt-20 lg:mt-32 min-h-[50vh]'>
+    <main id='hero' className='mt-20 lg:mt-56 min-h-[50vh]'>
       {/* Intro */}
       <div className='flex lg:flex-row flex-col container mx-auto px-5 lg:px-32'>
         <section className='basis-1/2 relative flex flex-col isolate justify-center'>
