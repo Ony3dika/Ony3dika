@@ -70,7 +70,7 @@ const Navbar = () => {
         </div>
 
         <nav
-          className={`w-full h-screen backdrop-blur-lg transition-all duration-300 ease-in-out text-base left-0 z-20 px-5 fixed ${
+          className={`w-full h-screen backdrop-blur-lg z-50 transition-all duration-300 ease-in-out text-base left-0 z-20 px-5 fixed ${
             mobileMenu ? "bottom-0" : "bottom-[-100%]"
           }`}
         >
