@@ -1,8 +1,8 @@
 import pro1 from "../assets/pro1.png";
-import pro2 from "../assets/pro2.png";
+import pro2 from "../assets/pro2.jpg";
 import pro3 from "../assets/pro3.png";
-import pro4 from "../assets/pro4.png";
-import pro5 from "../assets/pro5.png";
+import pro4 from "../assets/pro4.jpg";
+import pro5 from "../assets/pro5.jpg";
 import pro6 from "../assets/pro6.png";
 import { ImSpinner9 } from "react-icons/im";
 import { SiGithub } from "react-icons/si";
