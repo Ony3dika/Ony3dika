@@ -9,7 +9,6 @@ import { SiGithub } from "react-icons/si";
 import { RxExternalLink } from "react-icons/rx";
 import { useState } from "react";
 import Reveal from "../components/reveal";
-
 let projects = [
   {
     num: "01",
