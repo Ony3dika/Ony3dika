@@ -70,7 +70,7 @@ const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <main id='projects' className='mt-20 container mx-auto px-5 lg:px-32'>
+    <main id='projects' className='mt-20 container mx-auto px-5 xl:px-32 lg:px-20'>
       <Reveal>
         <p className='text-3xl font-semibold'>Projects</p>
       </Reveal>

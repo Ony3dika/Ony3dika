@@ -33,7 +33,7 @@ function App() {
   return (
     <>
       {loading ? (
-        <div className='h-screen w-full flex urban entry flex-col items-start px-5 lg:px-20 justify-center bg-base text-4xl lg:text-8xl'>
+        <div className='h-screen w-full flex urban entry flex-col items-start px-5 xl:px-20 lg:px-10 justify-center bg-base text-4xl lg:text-8xl'>
           <RevealEntry>
             <p className='font-black text-alt'>Hello !!!</p>
           </RevealEntry>

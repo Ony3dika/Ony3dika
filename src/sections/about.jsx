@@ -24,14 +24,14 @@ let stack = [
 
 const About = () => {
   return (
-    <main id='about' className='lg:mt-20 container mx-auto px-5 lg:px-32'>
+    <main id='about' className='lg:mt-20 container mx-auto px-5 xl:px-32 lg:px-20'>
       <Reveal>
         <p className='text-3xl font-semibold'>About</p>
       </Reveal>
-      <section className='flex lg:flex-row flex-col mt-5 lg:mt-10 text-alt/80'>
+      <section className='flex items-center lg:flex-row flex-col mt-5 lg:mt-10 text-alt/80'>
         <div className='basis-1/3'>
           <Reveal>
-            <p className='lg:text-3xl leading-8 lg:leading-relaxed'>
+            <p className='xl:text-3xl lg:text-xl leading-8 lg:leading-relaxed xl:leading-loose'>
               Creative developer with over 2 years of experience in developing
               interactive UI using technical tools to bring your vision to life
               through code.

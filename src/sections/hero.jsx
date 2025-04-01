@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <main id='hero' className='mt-20 lg:mt-56 min-h-[50vh]'>
       {/* Intro */}
-      <div className='flex lg:flex-row flex-col container mx-auto px-5 lg:px-32'>
+      <div className='flex lg:flex-row flex-col container mx-auto px-5 xl:px-32 lg:px-20'>
         <section className='basis-1/2 relative flex flex-col isolate justify-center'>
           <img
             src={hex}
@@ -30,7 +30,7 @@ const Hero = () => {
           </Reveal>
 
           <a href='#contact'>
-            <button className='mt-8 duration-300 lg:w-1/3 w-2/3 lg:ml-0 ml-16 group rounded-full flex items-center justify-center text-text hover:text-call hover:border-call hover:translate-y-5 hover:translate-x-5 font-medium border-[1px] border-alt lg:px-4 py-1.5 lg:py-3'>
+            <button className='mt-8 duration-300 xl:w-1/3 lg:w-fit w-2/3 lg:ml-0 ml-16 group rounded-full flex items-center justify-center text-text hover:text-call hover:border-call hover:translate-y-5 hover:translate-x-5 font-medium border-[1px] border-alt lg:px-4 xl:px-4 py-1.5 lg:py-3'>
               Let&apos;s discuss{" "}
               <HiOutlineArrowLongRight
                 className='lg:ml-3 ml-1 transition-all duration-100 ease-in-out group-hover:translate-x-5'

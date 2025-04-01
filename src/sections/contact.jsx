@@ -66,7 +66,7 @@ const Contact = () => {
   return (
     <main
       id='contact'
-      className='lg:mt-32 mt-20 container mx-auto px-5 lg:px-32'
+      className='lg:mt-32 mt-20 container mx-auto px-5 xl:px-32 lg:px-20'
     >
       <Reveal>
         <p className='text-3xl font-semibold'>Contact</p>
