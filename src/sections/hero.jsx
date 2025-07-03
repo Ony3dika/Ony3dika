@@ -24,8 +24,7 @@ const Hero = () => {
           <Reveal>
             {" "}
             <p className='mt-8 lg:text-xl ml-8 lg:ml-10 font-medium'>
-              A Nigerian <span className='text-call'>Web Developer</span> who
-              likes to be creative with websites.
+              A Creative <span className='text-call'>developer</span> 
             </p>
           </Reveal>
 

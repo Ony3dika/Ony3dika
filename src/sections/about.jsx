@@ -32,8 +32,8 @@ const About = () => {
         <div className='basis-1/3'>
           <Reveal>
             <p className='xl:text-3xl lg:text-xl leading-8 lg:leading-relaxed xl:leading-loose'>
-              Creative developer with over 2 years of experience in developing
-              interactive UI using technical tools to bring your vision to life
+              Creative developer with over 3 years of experience in developing
+              interactive UI to bring your vision to life
               through code.
             </p>
           </Reveal>

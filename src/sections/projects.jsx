@@ -4,6 +4,7 @@ import pro3 from "../assets/pro3.png";
 import pro4 from "../assets/pro4.jpg";
 import pro5 from "../assets/pro5.jpg";
 import pro6 from "../assets/pro6.png";
+import pro7 from "../assets/pro7.png"
 import { ImSpinner9 } from "react-icons/im";
 import { SiGithub } from "react-icons/si";
 import { RxExternalLink } from "react-icons/rx";
@@ -11,25 +12,30 @@ import { useState } from "react";
 import Reveal from "../components/reveal";
 let projects = [
   {
-    num: "01",
     title: "ArtScape",
-    body: " ArtScape is an art gallery which displays popular artworks from famous artists. The gallery composes of the details of the artwork together with its author and other relevant details.",
+    body: "ArtScape is an art gallery which displays popular artworks from famous artists. The gallery composes of the details of the artwork together with its author and other relevant details.",
     repo: "https://github.com/Ony3dika/artScape",
     link: "https://art-scape.vercel.app/",
     img: pro1,
   },
+  {
+   
+    title: "gryd",
+    body: "Introducing gryd -  a next-gen cloud service provider with a focus on security and reliability. ",
+    repo: "https://github.com/Ony3dika/gryd",
+    link: "https://grryd.vercel.app/",
+    img: pro7,
+  },
 
   {
-    num: "02",
     title: "Cinematrix",
-    body: " Cinematrix is a movie recommendation and search website built using Tailwind CSS, Jotai and ReactJS. It provider users a source to discover and search for movies and TV series depending on their desires TheMovieDB was used to efficiently gather the vast amount of data associated with the movies and TV series.",
+    body: "Cinematrix is a movie recommendation and search website built using Tailwind CSS, Jotai and ReactJS. It provider users a source to discover and search for movies and TV series depending on their desires TheMovieDB was used to efficiently gather the vast amount of data associated with the movies and TV series.",
     repo: "https://github.com/Ony3dika/Cinematrix",
     link: "https://cinematrix.ony3dika.vercel.app/",
     img: pro2,
   },
 
   {
-    num: "03",
     title: "Quanta",
     body: "Landing page of Quanta, the fusion of AI and data analytics.",
     repo: "https://github.com/Ony3dika/Quanta",
@@ -38,7 +44,6 @@ let projects = [
   },
 
   {
-    num: "04",
     title: "ClearLink",
     body: "A front-end challenge to develop a webpage for a concept platform which aims to solve communication breaches.",
     repo: "https://github.com/Ony3dika/Clear-Link",
@@ -56,7 +61,6 @@ let projects = [
   },
 
   {
-    num: "06",
     title: "NXTGaming",
     body: "NXTGaming is a gaming collection web app built using Tailwind CSS and ReactJS. The project aimed to provide gamers with a platform to explore and discover games. RAWG API was used to efficiently manage the vast amount of data associated with gaming collections.",
     repo: "https://github.com/Ony3dika/NXTGmn",
@@ -139,8 +143,8 @@ const Projects = () => {
               </div>
             </section>
 
-            <p className='absolute right-5 lg:bottom-10 bottom-2 font-semibold'>
-              {project.num}
+            <p className='absolute right-5 lg:bottom-10 bottom-2 font-bold'>
+              {index + 1}
             </p>
 
             {/* Image */}
