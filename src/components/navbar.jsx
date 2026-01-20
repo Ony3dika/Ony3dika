@@ -1,4 +1,3 @@
-import { IoCodeSlashOutline } from "react-icons/io5";
 import { CiMenuFries } from "react-icons/ci";
 import { TfiClose } from "react-icons/tfi";
 import { useState } from "react";
@@ -9,6 +8,7 @@ let menu = [
   { title: "Projects", to: "projects" },
   { title: "Contact", to: "contact" },
 ];
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -26,22 +26,20 @@ const Navbar = () => {
 
   return (
     <main className='lg:fixed z-40 top-0 flex items-center lg:h-24 h-16 lg:border-b-[1px] navbr border-alt/20 lg:bg-base justify-between container mx-auto px-5 xl:px-32 lg:px-20'>
-      <div className='basis-1/5 flex items-center lg:hidden'>
+      <div className='basis-2/5 flex justify-center items-center lg:hidden'>
         <Reveal>
-          <p className='mt-8 text-xl flex items-center text-alt'>
-            Ony3dika
-            <Reveal>
-              <IoCodeSlashOutline className='ml-2 text-call' size={"1rem"} />
-            </Reveal>
-          </p>
+          <img src={logo} className='h-6 w-6' alt='logo' />
+        </Reveal>
+        <Reveal>
+          <p className='ml-1 text-xl flex items-center text-alt'>Ony3dika</p>
         </Reveal>
       </div>
       <div className='basis-1/5 lg:flex items-center hidden'>
         <Reveal>
-          <p className='lg:text-xl text-lg font-medium'>Ony3dika</p>
+          <img src={logo} className='h-8 w-8 mr-1' alt='logo' />
         </Reveal>
         <Reveal>
-          <IoCodeSlashOutline className='ml-2 text-call' size={"1.5rem"} />
+          <p className='lg:text-xl text-lg font-medium'>Ony3dika</p>
         </Reveal>
       </div>
 
@@ -77,13 +75,10 @@ const Navbar = () => {
               <section className='flex justify-between items-center mt-10'>
                 <div className='flex items-center'>
                   <Reveal>
-                    <p className='lg:text-xl text-lg font-medium'>Ony3dika</p>
+                    <img src={logo} className='h-6 w-6 mr-1' alt='logo' />
                   </Reveal>
                   <Reveal>
-                    <IoCodeSlashOutline
-                      className='ml-2 text-call'
-                      size={"1.5rem"}
-                    />
+                    <p className='lg:text-xl text-lg font-medium'>Ony3dika</p>
                   </Reveal>
                 </div>
                 <TfiClose onClick={() => setMobileMenu(false)} />

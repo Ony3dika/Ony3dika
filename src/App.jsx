@@ -1,10 +1,10 @@
 import Navbar from "./components/navbar";
-import RevealEntry from "./components/revealEntry";
 import About from "./sections/about";
 import Contact from "./sections/contact";
 import Hero from "./sections/hero";
 import Projects from "./sections/projects";
 import { useState, useEffect } from "react";
+import logo from "./assets/logo.png"
 
 function App() {
   const [mousePosition, setMousePosition] = useState({
@@ -24,8 +24,8 @@ function App() {
     };
 
     setTimeout(() => {
-      setLoading(false)
-    }, 7350);
+      setLoading(false);
+    }, 3500);
 
     window.addEventListener("mousemove", mouseMove);
   }, []);
@@ -33,23 +33,10 @@ function App() {
   return (
     <>
       {loading ? (
-        <div className='h-screen w-full flex urban entry flex-col items-start px-5 xl:px-20 lg:px-10 justify-center bg-base text-4xl lg:text-8xl'>
-          <RevealEntry>
-            <p className='font-black text-alt'>Hello !!!</p>
-          </RevealEntry>
+        <div className='h-screen w-full flex urban entry flex-col items-center px-5 xl:px-20 lg:px-10 justify-center bg-base text-4xl lg:text-8xl'>
+          <img src={logo} className='lg:h-20 h-12 lg:w-20 w-12 animate-pulse' alt='logo' />
 
-          <RevealEntry delay={2.5} delay2={2.15}>
-            <p className='font-black my-10 text-alt'>
-              Please <span className='text-call'>wait</span> while the content
-              loads....
-            </p>
-          </RevealEntry>
-
-          <RevealEntry delay={4.5} delay2={4.15} >
-            <p className='font-black text-alt'>
-              Oh wait! It&apos;s already <span className='text-call'>done</span>
-            </p>
-          </RevealEntry>
+          <p className='text-xl lg:text-5xl animate-pulse py-2'>Ony3dika</p>
         </div>
       ) : (
         <div className='min-h-screen overflow-hidden bg-base relative app text-alt urban pb-10 lg:pb-20'>

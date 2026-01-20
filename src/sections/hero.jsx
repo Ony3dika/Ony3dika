@@ -24,7 +24,7 @@ const Hero = () => {
           <Reveal>
             {" "}
             <p className='mt-8 lg:text-xl ml-8 lg:ml-10 font-medium'>
-              A Creative <span className='text-call'>developer</span> 
+              A Creative <span className='text-call'>developer</span> and frontend engineer 
             </p>
           </Reveal>
 

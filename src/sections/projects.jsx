@@ -3,8 +3,11 @@ import pro2 from "../assets/pro2.jpg";
 import pro3 from "../assets/pro3.png";
 import pro4 from "../assets/pro4.jpg";
 import pro5 from "../assets/pro5.jpg";
-import pro6 from "../assets/pro6.png";
-import pro7 from "../assets/pro7.png"
+import pro6 from "../assets/pro6.jpg";
+import pro7 from "../assets/pro7.jpg";
+import pro8 from "../assets/pro8.jpg";
+import pro9 from "../assets/pro9.png";
+
 import { ImSpinner9 } from "react-icons/im";
 import { SiGithub } from "react-icons/si";
 import { RxExternalLink } from "react-icons/rx";
@@ -12,40 +15,52 @@ import { useState } from "react";
 import Reveal from "../components/reveal";
 let projects = [
   {
-    title: "ArtScape",
-    body: "ArtScape is an art gallery which displays popular artworks from famous artists. The gallery composes of the details of the artwork together with its author and other relevant details.",
-    repo: "https://github.com/Ony3dika/artScape",
-    link: "https://art-scape.vercel.app/",
-    img: pro1,
+    title: "Koda",
+    body: "A collaborative web-based text editor",
+    repo: "https://github.com/Ony3dika/koda",
+    link: "https://koda-kody.vercel.app/",
+    img: pro8,
   },
   {
-   
+    title: "Ordo",
+    body: "Introducing gryd -  a next-gen cloud service provider with a focus on security and reliability",
+    repo: "https://github.com/Ony3dika/Ordo",
+    link: "https://ordo-six.vercel.app/",
+    img: pro9,
+  },
+  {
+    title: "Clyp",
+    body: "Screen record videos on your device and store locally in high resolution",
+    repo: "https://github.com/Ony3dika/Clyp",
+    link: "https://clyp-x.vercel.app/",
+    img: pro3,
+  },
+  {
     title: "gryd",
-    body: "Introducing gryd -  a next-gen cloud service provider with a focus on security and reliability. ",
+    body: "A landing page for an AI powered workflow system",
     repo: "https://github.com/Ony3dika/gryd",
     link: "https://grryd.vercel.app/",
     img: pro7,
   },
+  {
+    title: "ArtScape",
+    body: "ArtScape is an art gallery which displays popular artworks from famous artists. The gallery composes of the details of the artwork together with its author and other relevant details",
+    repo: "https://github.com/Ony3dika/artScape",
+    link: "https://art-scape.vercel.app/",
+    img: pro1,
+  },
 
   {
     title: "Cinematrix",
-    body: "Cinematrix is a movie recommendation and search website built using Tailwind CSS, Jotai and ReactJS. It provider users a source to discover and search for movies and TV series depending on their desires TheMovieDB was used to efficiently gather the vast amount of data associated with the movies and TV series.",
+    body: "Cinematrix is a movie recommendation and search website built using Tailwind CSS, Jotai and ReactJS. It provider users a source to discover and search for movies and TV series depending on their desires TheMovieDB was used to efficiently gather the vast amount of data associated with the movies and TV series",
     repo: "https://github.com/Ony3dika/Cinematrix",
     link: "https://cinematrix.ony3dika.vercel.app/",
     img: pro2,
   },
 
   {
-    title: "Quanta",
-    body: "Landing page of Quanta, the fusion of AI and data analytics.",
-    repo: "https://github.com/Ony3dika/Quanta",
-    link: "https://quanta-ony3dikas-projects.vercel.app/",
-    img: pro3,
-  },
-
-  {
     title: "ClearLink",
-    body: "A front-end challenge to develop a webpage for a concept platform which aims to solve communication breaches.",
+    body: "A front-end challenge to develop a webpage for a concept platform which aims to solve communication breaches",
     repo: "https://github.com/Ony3dika/Clear-Link",
     link: "https://clear-link-tan.vercel.app//",
     img: pro4,
@@ -69,12 +84,14 @@ let projects = [
   },
 ];
 
-
 const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <main id='projects' className='mt-20 container mx-auto px-5 xl:px-32 lg:px-20'>
+    <main
+      id='projects'
+      className='mt-20 container mx-auto px-5 xl:px-32 lg:px-20'
+    >
       <Reveal>
         <p className='text-3xl font-semibold'>Projects</p>
       </Reveal>
@@ -101,7 +118,7 @@ const Projects = () => {
               }`}
             >
               <Reveal>
-                <p className='text-xl lg:text-5xl marcel'>{project.title}</p>
+                <p className='text-xl lg:text-5xl py-2 marcel'>{project.title}</p>
               </Reveal>
 
               <img
@@ -130,7 +147,7 @@ const Projects = () => {
                     <SiGithub size={"1.5rem"} />
                   </a>
                 </Reveal>
-                
+
                 <Reveal>
                   <a
                     href={project.link}
