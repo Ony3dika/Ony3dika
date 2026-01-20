@@ -1,5 +1,5 @@
 # 💫 About Me:
-Hi, I'm Onyedika a UI/UX - driven developer who enjoys <br>Developing interactive interfaces 👨🏽‍💻, <br>Playing games 🎮 and <br>Watching anime ⛩️<br>
+Hi, I'm Onyedika a Creative developer who enjoys <br>Developing interactive interfaces 👨🏽‍💻, <br>Playing games 🎮 and <br>Watching anime ⛩️<br>
 
 
 ## 🌐 Socials:
