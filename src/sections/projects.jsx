@@ -7,6 +7,7 @@ import pro6 from "../assets/pro6.jpg";
 import pro7 from "../assets/pro7.jpg";
 import pro8 from "../assets/pro8.jpg";
 import pro9 from "../assets/pro9.png";
+import pro10 from "../assets/pro10.jpg";
 
 import { ImSpinner9 } from "react-icons/im";
 import { SiGithub } from "react-icons/si";
@@ -20,6 +21,13 @@ let projects = [
     repo: "https://github.com/Ony3dika/koda",
     link: "https://koda-kody.vercel.app/",
     img: pro8,
+  },
+  {
+    title: "Arqon",
+    body: "Architecture & Design Studio",
+    repo: "https://github.com/Ony3dika/Arqon",
+    link: "https://arqon-ashy.vercel.app/",
+    img: pro10,
   },
   {
     title: "Ordo",
@@ -52,7 +60,7 @@ let projects = [
 
   {
     title: "Cinematrix",
-    body: "Cinematrix is a movie recommendation and search website built using Tailwind CSS, Jotai and ReactJS. It provider users a source to discover and search for movies and TV series depending on their desires TheMovieDB was used to efficiently gather the vast amount of data associated with the movies and TV series",
+    body: "Cinematrix is a movie recommendation and search website built using Tailwind CSS, Jotai and ReactJS. It provides users a source to discover and search for movies and TV series depending on their desires. TheMovieDB was used to efficiently gather the vast amount of data associated with the movies and TV series",
     repo: "https://github.com/Ony3dika/Cinematrix",
     link: "https://cinematrix.ony3dika.vercel.app/",
     img: pro2,
