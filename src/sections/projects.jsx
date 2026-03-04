@@ -1,13 +1,12 @@
 import pro1 from "../assets/pro1.png";
 import pro2 from "../assets/pro2.jpg";
 import pro3 from "../assets/pro3.png";
-import pro4 from "../assets/pro4.jpg";
-import pro5 from "../assets/pro5.jpg";
 import pro6 from "../assets/pro6.jpg";
 import pro7 from "../assets/pro7.jpg";
 import pro8 from "../assets/pro8.jpg";
 import pro9 from "../assets/pro9.png";
 import pro10 from "../assets/pro10.jpg";
+import pro11 from "../assets/pro11.jpg";
 
 import { ImSpinner9 } from "react-icons/im";
 import { SiGithub } from "react-icons/si";
@@ -21,6 +20,13 @@ let projects = [
     repo: "https://github.com/Ony3dika/koda",
     link: "https://koda-kody.vercel.app/",
     img: pro8,
+  },
+  {
+    title: "Chêne",
+    body: "Handcrafted wooden furniture workshop for modern homes",
+    repo: "https://github.com/Ony3dika/Chene",
+    link: "https://chene-seven.vercel.app/",
+    img: pro11,
   },
   {
     title: "Arqon",
@@ -67,23 +73,6 @@ let projects = [
   },
 
   {
-    title: "ClearLink",
-    body: "A front-end challenge to develop a webpage for a concept platform which aims to solve communication breaches",
-    repo: "https://github.com/Ony3dika/Clear-Link",
-    link: "https://clear-link-tan.vercel.app//",
-    img: pro4,
-  },
-
-  {
-    num: "05",
-    title: "getLinked",
-    body: "Participated in a hackathon organized by getLinked.ai.  The challenge involves creating a landing page, a contact page and register page which has API endpoints for communication with the backend.",
-    repo: "https://github.com/Ony3dika/getLinked",
-    link: "https://get-linked-ruddy.vercel.app/",
-    img: pro5,
-  },
-
-  {
     title: "NXTGaming",
     body: "NXTGaming is a gaming collection web app built using Tailwind CSS and ReactJS. The project aimed to provide gamers with a platform to explore and discover games. RAWG API was used to efficiently manage the vast amount of data associated with gaming collections.",
     repo: "https://github.com/Ony3dika/NXTGmn",
@@ -126,7 +115,9 @@ const Projects = () => {
               }`}
             >
               <Reveal>
-                <p className='text-xl lg:text-5xl py-2 marcel'>{project.title}</p>
+                <p className='text-xl lg:text-5xl py-2 marcel'>
+                  {project.title}
+                </p>
               </Reveal>
 
               <img
