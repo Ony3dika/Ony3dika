@@ -1,7 +1,6 @@
 import pro1 from "../assets/pro1.png";
 import pro2 from "../assets/pro2.jpg";
 import pro3 from "../assets/pro3.png";
-import pro6 from "../assets/pro6.jpg";
 import pro7 from "../assets/pro7.jpg";
 import pro8 from "../assets/pro8.jpg";
 import pro9 from "../assets/pro9.png";
@@ -71,14 +70,6 @@ let projects = [
     link: "https://cinematrix.ony3dika.vercel.app/",
     img: pro2,
   },
-
-  {
-    title: "NXTGaming",
-    body: "NXTGaming is a gaming collection web app built using Tailwind CSS and ReactJS. The project aimed to provide gamers with a platform to explore and discover games. RAWG API was used to efficiently manage the vast amount of data associated with gaming collections.",
-    repo: "https://github.com/Ony3dika/NXTGmn",
-    link: "https://nxt-gmn.vercel.app/",
-    img: pro6,
-  },
 ];
 
 const Projects = () => {
@@ -93,25 +84,18 @@ const Projects = () => {
         <p className='text-3xl font-semibold'>Projects</p>
       </Reveal>
       {/* Project Section */}
-      <section className='lg:mt-10 mt-5 flex group flex-col divide-y-[1px] divide-alt'>
+      <section className='lg:mt-10 mt-5 flex group flex-col divide-y-[1px] divide-alt/30'>
         {projects.map((project, index) => (
           <div
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
-            className='lg:min-h-72 min-h-48 lg:py-10 flex lg:flex-row relative flex-col items-center group'
+            className='lg:py-10 lex-row relative flex-col items-center group'
             key={index}
           >
-            <ImSpinner9
-              className={`animate-spin-slow hidden transition-all duration-1000 text-call ${
-                index == hoveredIndex ? "lg:group-hover:inline" : ""
-              }`}
-              size={"1.4rem"}
-            />
-
             {/* Text Desc of Project */}
             <section
-              className={`basis-full lg:basis-2/3 lg:ml-5 py-5 lg:py-0 duration-500 ease-in-out transition-all ${
-                index == hoveredIndex ? "lg:group-hover:translate-x-8" : "s]"
+              className={`basis-full relative lg:basis-2/3 lg:ml-5 py-5 lg:py-0 duration-300 ease-in-out transition-all ${
+                index == hoveredIndex ? "lg:group-hover:translate-x-8" : ""
               }`}
             >
               <Reveal>
@@ -120,23 +104,13 @@ const Projects = () => {
                 </p>
               </Reveal>
 
-              <img
-                src={project.img}
-                className={`transition-all ease-in-out duration-700 rounded-xl block lg:hidden ${
-                  index == hoveredIndex
-                    ? "group-hover:scale-100 scale-90 group-hover:contrast-100"
-                    : "scale-[0.85] contrast-50"
-                }`}
-                alt='image-of-project'
-              />
-
               <Reveal>
                 <p className='mt-3 lg:text-lg text-xs text-alt/70'>
                   {project.body}
                 </p>
               </Reveal>
 
-              <div className='flex justify-around text-alt/80 mt-5 lg:mt-10 w-1/3 lg:w-1/5'>
+              <div className='flex gap-x-5 text-alt/80 mt-5  w-1/3 lg:w-1/5'>
                 <Reveal>
                   <a
                     href={project.repo}
@@ -167,7 +141,7 @@ const Projects = () => {
 
             <img
               src={project.img}
-              className={`lg:h-36 h-20 lg:block absolute hidden rounded-xl top-0 lg:top-auto right-0 lg:right-20 z-10 transition-all duration-500 ease-in-out ${
+              className={`lg:h-36 h-20 lg:block absolute hidden rounded-xl bottom-0 right-0 lg:right-20 z-10 transition-all duration-300 ease-in-out ${
                 index === hoveredIndex
                   ? "opacity-100 scale-125 -translate-y-10 translate-x-10"
                   : "opacity-0 scale-[0.9]"

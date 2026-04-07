@@ -87,7 +87,7 @@ const Contact = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className='lg:basis-[70%] lg:border-l-[1px] border-alt/20 flex flex-col justify-center lg:px-10 lg:bg-[#ddcfc8]'
+          className='lg:basis-[70%] lg:border-l-[1px] border-alt/20 flex flex-col justify-center lg:px-10'
         >
           <section className='flex items-center justify-between lg:mt-0 mt-10'>
             <Reveal>

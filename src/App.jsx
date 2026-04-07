@@ -25,7 +25,7 @@ function App() {
 
     setTimeout(() => {
       setLoading(false);
-    }, 3500);
+    }, 2500);
 
     window.addEventListener("mousemove", mouseMove);
   }, []);

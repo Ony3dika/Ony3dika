@@ -25,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <main className='lg:fixed z-40 top-0 flex items-center lg:h-24 h-16 lg:border-b-[1px] navbr border-alt/20 lg:bg-base justify-between container mx-auto px-5 xl:px-32 lg:px-20'>
+    <main className='lg:fixed z-40 top-0 flex items-center lg:h-24 h-16 navbr lg:bg-base justify-between container mx-auto px-5 xl:px-32 lg:px-20'>
       <div className='basis-2/5 flex justify-center items-center lg:hidden'>
         <Reveal>
           <img src={logo} className='h-6 w-6' alt='logo' />

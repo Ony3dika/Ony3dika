@@ -30,7 +30,7 @@ const Hero = () => {
 
           <a href='#contact'>
             <button className='mt-8 duration-300 xl:w-1/3 lg:w-fit w-2/3 lg:ml-0 ml-16 group rounded-full flex items-center justify-center text-text hover:text-call hover:border-call hover:translate-y-5 hover:translate-x-5 font-medium border-[1px] border-alt lg:px-4 xl:px-4 py-1.5 lg:py-3'>
-              Let&apos;s discuss{" "}
+            Contact
               <HiOutlineArrowLongRight
                 className='lg:ml-3 ml-1 transition-all duration-100 ease-in-out group-hover:translate-x-5'
                 size={"1.8rem"}
